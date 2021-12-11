@@ -41,5 +41,5 @@ def solution(obs):
      pr = error_yel * 0.04
      angle = pr
 
-         vel = 0.4
+     vel = 0.4
      return [vel, angle]
