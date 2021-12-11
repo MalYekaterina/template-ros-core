@@ -18,16 +18,16 @@ def solution(obs):
               for j in range(0, bin_yellow.shape[1] // 2, 10):
                    # print(j)
                    if bin_yellow[i, j] > 0:
-                   point_yellow.append([j, i])
-                   print(point_yellow)
-                   k += 1
-                   if abs(jold - j) > 100 and k > 0:
-                        point_yellow.pop()
-                        stop_flag = True
-                        jold = j
+                       point_yellow.append([j, i])
+                       print(point_yellow)
+                       k += 1
+                       if abs(jold - j) > 100 and k > 0:
+                           point_yellow.pop()
+                           stop_flag = True
+                       jold = j
                             # print('end')
-                        break
-     print(point_yellow)
+                       break
+     #print(point_yellow)
      error_yel = 0
      i = 1
      h = 0
@@ -36,10 +36,10 @@ def solution(obs):
          h = yel[1] * 0.001 + 1
          error_yel = h * (118 - yel[0]) + error_yel
          i = i + 1
-         error_yel = error_yel / i
+     error_yel = error_yel / i
             
-         pr = error_yel * 0.04
-         angle = pr
+     pr = error_yel * 0.04
+     angle = pr
 
          vel = 0.4
      return [vel, angle]
