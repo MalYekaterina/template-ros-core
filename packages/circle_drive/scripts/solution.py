@@ -1,7 +1,7 @@
 
 def solution(obs):
     img_gray = cv2.cvtColor(obs, cv2.COLOR_BGR2GRAY)
-    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    hsv = cv2.cvtColor(obs, cv2.COLOR_BGR2HSV)
     bin_yellow = cv2.inRange(hsv, (20, 80, 80), (110, 255, 255))
     num_yellow = np.count_nonzero(bin_yellow)
     point_yellow = []
